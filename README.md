@@ -2,13 +2,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="https://via.placeholder.com/80/FFFFFF/808080?text=Logo" alt="Logo" width="80" height="80">
+    <img src="./laporan/gopher.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Judul Proyek</h3>
+  <h3 align="center">Website Manajemen Angkatan</h3>
 
   <p align="center">
-    Deskripsi Proyek
+    Website manajemen untuk angkatan Gopher...
   </p>
 </p>
 
@@ -27,35 +27,48 @@
 
 <!-- Anggota Tim -->
 ## Anggota Tim
-| NPM           | Name        |
-| ------------- |-------------|
-| 140810xx00xx  | John Doe    |
-| 140810xx00xx  | Jane Doe    |
-| 140810xx00xx  | Janie Doe   |
+| NPM           | Name                      |
+| ------------- |---------------------------|
+| 140810200035  | Naufal Fahrezi            |
+| 140810200053  | Calvin Calfi Montolalu    |
+| 140810200059  | Deani Puteri Virdiana     |
 
 <!-- Fungsi -->
 ## Fungsi
-
-TO;DO
+<p>
+  Fungsi yang ingin dibawakan dalam project ini adalah:
+  <ul>
+    <li>Lorem ipsum...</li>
+    <li>Lorem ipsum...</li>
+    <li>Lorem ipsum...</li>
+  </ul>
+</p>
 
 <!-- Tujuan -->
 ## Tujuan
-
-TO;DO
+<p>
+  Tujuan dari proyek ini adalah sebagai berikut:
+  <ul>
+    <li>Lorem ipsum...</li>
+    <li>Lorem ipsum...</li>
+    <li>Lorem ipsum...</li>
+  </ul>
+</p>
 
 <!-- Target Pengguna -->
 ## Target Pengguna
-
-TO;DO
+<p>
+  Target pengguna yang ingin dicapai adalah ...
+</p>
 
 <!-- Mockup Kasar -->
 ## Mockup Kasar
-
-TO;DO
-
-Gambar mockup di sini atau [link figma](https://figma.com/).
+Untuk link figma dapat diakses pada [link](https://www.figma.com/file/B4zdjCBEwfNoNqokeUEe6O/Web-Gopher?node-id=1%3A2).
 
 <!-- Skema Database -->
 ## Skema Database
-
-TO;DO
+<h1>Entity Relation Diagram</h1>
+<img src="./laporan/skema/proyek-kelompok-5-ERD.drawio.png">
+<h1>Tabel Relasi</h1>
+<img src="./laporan/skema/proyek-kelompok-5-Tabel Relasi.drawio.png">
+<a href="https://drive.google.com/file/d/172h4Bqo5n72F8J5EDgZ69UvWLgr2YD6t/view?usp=sharing">Link Drawio</a>
