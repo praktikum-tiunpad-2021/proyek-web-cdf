@@ -5,10 +5,10 @@
     <img src="./laporan/gopher.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Website Manajemen Angkatan</h3>
+  <h3 align="center">Website Manajemen Gopher</h3>
 
   <p align="center">
-    Website manajemen untuk angkatan Gopher...
+    Website manajemen untuk angkatan Gopher yang meliputi fitur pengumuman, to do list, dan reminder dalam kalender
   </p>
 </p>
 
@@ -38,9 +38,9 @@
 <p>
   Fungsi yang ingin dibawakan dalam project ini adalah:
   <ul>
-    <li>Lorem ipsum...</li>
-    <li>Lorem ipsum...</li>
-    <li>Lorem ipsum...</li>
+    <li>Membuat pengumuman untuk angkatan Gopher</li>
+    <li>Membuat to do list untuk angkatan Gopher</li>
+    <li>Membuat reminder pada kalender</li>
   </ul>
 </p>
 
@@ -49,16 +49,17 @@
 <p>
   Tujuan dari proyek ini adalah sebagai berikut:
   <ul>
-    <li>Lorem ipsum...</li>
-    <li>Lorem ipsum...</li>
-    <li>Lorem ipsum...</li>
+    <li>Mengenalkan masyarakat terhadap angkatan Gopher Teknik Informatika 2020</li>
+    <li>Memudahkan angkatan gopher untuk penyebaran informasi terkait perkuliahan dan kegiatan sosial</li>
+    <li>Memudahkan masing-masing angkatan gopher untuk membuat catatan serta reminder pada kalender</li>
   </ul>
 </p>
 
 <!-- Target Pengguna -->
 ## Target Pengguna
 <p>
-  Target pengguna yang ingin dicapai adalah ...
+  Target pengguna fitur dashboard dan manajemen diri adalah angkatan Gopher. Sedangkan untuk target pengguna web secara umum adalah
+  masyarakat umum.
 </p>
 
 <!-- Mockup Kasar -->
