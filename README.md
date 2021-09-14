@@ -5,7 +5,7 @@
     <img src="./laporan/gopher.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Website Manajemen Gopher</h3>
+  <h3 align="center">Website Manajemen Diri Gopher</h3>
 
   <p align="center">
     Website manajemen untuk angkatan Gopher yang meliputi fitur pengumuman, to do list, dan reminder dalam kalender
@@ -64,12 +64,30 @@
 
 <!-- Mockup Kasar -->
 ## Mockup Kasar
+<h3>Landing Page</h3>
+<img src="./laporan/mockup/Landing Page.jpg">
+
+<h3>Login Page</h3>
+<img src="./laporan/mockup/Login Page.jpg">
+
+<h3>User Dashboard</h3>
+<img src="./laporan/mockup/User Dashboard.jpg">
+
+<h3>Profile Page</h3>
+<img src="./laporan/mockup/Profile Page.jpg">
+
+<h3>Calendar Page</h3>
+<img src="./laporan/mockup/Calendar Page.jpg">
+
+<h3>Announcement Page</h3>
+<img src="./laporan/mockup/Announcement Page.jpg">
+
 Untuk link figma dapat diakses pada [link](https://www.figma.com/file/B4zdjCBEwfNoNqokeUEe6O/Web-Gopher?node-id=1%3A2).
 
 <!-- Skema Database -->
 ## Skema Database
-<h1>Entity Relation Diagram</h1>
+<h3>Entity Relation Diagram</h3>
 <img src="./laporan/skema/proyek-kelompok-5-ERD.drawio.png">
-<h1>Tabel Relasi</h1>
+<h3>Tabel Relasi</h3>
 <img src="./laporan/skema/proyek-kelompok-5-Tabel Relasi.drawio.png">
 <a href="https://drive.google.com/file/d/172h4Bqo5n72F8J5EDgZ69UvWLgr2YD6t/view?usp=sharing">Link Drawio</a>
