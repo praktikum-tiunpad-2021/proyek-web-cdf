@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+$yellow: #fcc100;
+$grey: #363636;
+$white: #fff;
+
+$headerSize: 48px;
+$pSize: 24px;
+$logoSize: 350px;
+$fotoOrangWidth: 210px;
+$fotoOrangHeight: 280px;
+
+nav {
+    button {
+        background-color: $yellow;
+        color: $white;
+        width: 150px;
+        height: 50px;
+        border: none;
+        border-radius: 15px;
+        font-size: $pSize;
+    }
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+h2 {
+    color: $yellow;
+    font-size: $headerSize;
+}
+
+.logo {
+    width: $logoSize;
+    height: auto;
+}
+
+.foto-orang {
+    width: $fotoOrangWidth;
+    height: $fotoOrangHeight;
+}
+
+p, figcaption {
+    font-size: $pSize;
+}
+
+figcaption {
+    width: $fotoOrangWidth;
+    text-align: center;
+}
+
+#koordinator {
+    #foto {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+#anggota {
+    h4 {
+        text-align: center;
+    }
+
+    #list {
+        width: 822px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

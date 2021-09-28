@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Website Gopher</title>
+
+        <link rel="icon" type="image/png" href="./assets/img/gopher.png">
+        <link rel="stylesheet" href="./assets/styles/index.css">
+    </head>
+    <body>
+        <nav>
+            <a href="login.php">
+                <button>Login</button>
+            </a>
+        </nav>
+        <main>
+            <article id="gopher">
+                <img class="logo" src="./assets/img/gopher.png" alt="Logo Gopher">
+                <section id="intro">
+                    <h2>Gopher 2020</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ad ducimus dignissimos, quo eum doloribus commodi adipisci aliquid in voluptate reprehenderit libero pariatur obcaecati quaerat molestias nisi dolorum perspiciatis fugit?</p>
+                </section>
+            </article>
+            <article id="koordinator">
+                <h4>Koordinator & Wakil Koordinator</h4>
+                <section id="foto">
+                    <!-- Ini masih default display -->
+                    <!-- Akan terisi oleh backend -->
+                    <figure>
+                        <img class="foto-orang" src="./assets/img/default.png" alt="Foto Koor">
+                        <figcaption>Nama</figcaption>
+                        <figcaption>140810200xxx</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="foto-orang" src="./assets/img/default.png" alt="Foto Wakoor">
+                        <figcaption>Nama</figcaption>
+                        <figcaption>140810200xxx</figcaption>
+                    </figure>
+                </section>
+            </article>
+            <article id="anggota">
+                <h4>Anggota</h4>
+                <section id="list">
+                    <script>
+                        const html = `
+                            <figure>
+                                <figcaption>Nama</figcaption>
+                                <figcaption>140810200xxx</figcaption>
+                            </figure>
+                        `;
+
+                        for(let i=0; i<12; i++) {
+                            document.writeln(html);
+                        }
+                    </script>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,1 +1,56 @@
-@import url("Colors.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+nav button {
+  background-color: #fcc100;
+  color: #fff;
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  font-size: 24px;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  color: #fcc100;
+  font-size: 48px;
+}
+
+.logo {
+  width: 350px;
+  height: auto;
+}
+
+.foto-orang {
+  width: 210px;
+  height: 280px;
+}
+
+p, figcaption {
+  font-size: 24px;
+}
+
+figcaption {
+  width: 210px;
+  text-align: center;
+}
+
+#koordinator #foto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#anggota h4 {
+  text-align: center;
+}
+#anggota #list {
+  width: 822px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/*# sourceMappingURL=index.css.map */
