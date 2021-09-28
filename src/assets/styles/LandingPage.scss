@@ -1,39 +1,96 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 $yellow: #fcc100;
+$yellowLow: #CA9A00;
 $grey: #363636;
 $white: #fff;
 
-$headerSize: 48px;
-$pSize: 24px;
-$logoSize: 350px;
+$headerSize: 24px;
+$pSize: 18px;
+$logoSize: 700px;
 $fotoOrangWidth: 210px;
-$fotoOrangHeight: 280px;
-
-nav {
-    button {
-        background-color: $yellow;
-        color: $white;
-        width: 150px;
-        height: 50px;
-        border: none;
-        border-radius: 15px;
-        font-size: $pSize;
-    }
-}
+$fotoOrangHeight: (4/3 * $fotoOrangWidth);
 
 * {
     font-family: "Roboto", sans-serif;
 }
 
-h2 {
-    color: $yellow;
-    font-size: $headerSize;
+body {
+    padding: 0 100px;
 }
 
-.logo {
-    width: $logoSize;
-    height: auto;
+nav {
+    padding: 20px 0;
+    display: flex;
+    justify-content: end;
+    button {
+        background-color: $yellow;
+        color: $white;
+        padding: 10px 30px;
+        border: none;
+        border-radius: 10px;
+        font-size: $pSize;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: $yellowLow;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+    }
+}
+
+main {
+    padding: 0 40px;
+
+    article {
+        margin-top: 40px;
+    }
+
+    #gopher {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+    
+        img {
+            width: $logoSize;
+            height: auto;
+        }
+    }
+
+    .anggota {
+        background-color: $yellow;
+        border-radius: 30px;
+        padding: 10px;
+    }
+
+    #koordinator {
+        #foto {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+    }
+
+    #anggota {
+        #list {
+            width: 880px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+h2 {
+    color: $yellow;
+    font-size: 36px;
+}
+
+h4 {
+    font-size: $headerSize;
+    text-align: center;
 }
 
 .foto-orang {
@@ -48,25 +105,4 @@ p, figcaption {
 figcaption {
     width: $fotoOrangWidth;
     text-align: center;
-}
-
-#koordinator {
-    #foto {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-#anggota {
-    h4 {
-        text-align: center;
-    }
-
-    #list {
-        width: 822px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
