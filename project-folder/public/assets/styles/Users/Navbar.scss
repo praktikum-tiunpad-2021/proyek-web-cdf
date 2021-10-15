@@ -1,0 +1,94 @@
+@import "../Defaults/Colors.scss";
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    background-color: $yellow;
+    button {
+        border: none;
+        background-color: transparent;
+
+        span {
+            margin-left: 20px;
+            color: $white;
+        }
+    }
+}
+
+nav {
+    $fontSize: 28px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $yellow;
+    width: 250px;
+    font-size: $fontSize;
+    font-weight: 700;
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+    }
+
+    ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        li {
+            text-align: center;
+            list-style: none;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $grey;
+    }
+
+    button {
+        &:hover {
+            cursor: pointer;
+        }
+
+        &#close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: transparent;
+            border: none;
+            
+            span {
+                font-size: 36px;
+            }
+        }
+
+        &#logout {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            border-top: 3px solid $grey;
+            padding: 10px;
+            font-size: $fontSize;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+    }
+}
