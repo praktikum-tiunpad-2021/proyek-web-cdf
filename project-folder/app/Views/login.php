@@ -1,3 +1,12 @@
+<?php
+
+$invalid=false;
+if(isset($_GET["invalid"])) {
+    $wrongPassword=settype($_GET["invalid"], "boolean");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,18 +19,29 @@
         <link rel="stylesheet" href="assets/styles/login.css">
     </head>
     <body>
-        <form action="#" method="POST">
-            <section id="npm-input">
-                <label for="npm">NPM</label>
-                <input type="text" name="npm">
-            </section>
-            <section id="password-input">
-                <label for="password">Password</label>
-                <input id="password" type="password" name="password">
-                <span id="visibility" class="material-icons">visibility</span>
-            </section>
-            <button id="login" type="submit">Login</button>
-        </form>
+        <a href="/">
+            <img id="logo" src="assets/img/gopher.png" alt="Logo Gopher" width="150" height="150">
+        </a>
+        <main>
+            <header>
+                <h1>Selamat datang Gopher</h1>
+                <h2>Login</h2>
+            </header>
+            <form action="/validateLogin" method="POST">
+                <section id="npm-input" class="inputs">
+                    <label for="npm">NPM</label>
+                    <input type="text" name="npm">
+                </section>
+                <section id="password-input" class="inputs">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password">
+                    <span id="visibility" class="material-icons">visibility</span>
+                </section>
+
+                <button id="login" type="submit">Login</button>
+            </form>
+        </main>
+
         <script src="assets/scripts/showPassword.js"></script>
     </body>
 </html>

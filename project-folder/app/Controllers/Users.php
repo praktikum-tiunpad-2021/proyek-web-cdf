@@ -2,7 +2,7 @@
 
 class Users extends BaseController {
     public function home() {
-        return view('Users/home');
+        return view('User/home');
     }
 }
 
