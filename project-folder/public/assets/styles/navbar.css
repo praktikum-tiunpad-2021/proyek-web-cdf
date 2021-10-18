@@ -3,6 +3,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 aside {
   position: fixed;
   top: 0;
@@ -15,20 +19,26 @@ aside button {
   border: none;
   background-color: transparent;
 }
+aside button:hover {
+  cursor: pointer;
+}
 aside button span {
-  margin-left: 20px;
+  margin: 10px 20px;
+  transform: scale(1.5);
   color: #fff;
 }
 
 nav {
+  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   background-color: #fcc100;
-  width: 250px;
+  width: 0;
   font-size: 28px;
   font-weight: 700;
+  transition: 0.5s;
 }
 nav header {
   display: flex;
@@ -59,6 +69,7 @@ nav button#close {
   right: 0;
   background-color: transparent;
   border: none;
+  color: #fff;
 }
 nav button#close span {
   font-size: 36px;

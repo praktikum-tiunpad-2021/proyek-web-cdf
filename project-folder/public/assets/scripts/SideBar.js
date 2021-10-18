@@ -1,41 +1,19 @@
-const Sidebar = `
-    <nav id="sidebar">
-        <button id="close">
-            <span class="material-icons">
-                close
-            </span>
-        </button>
-        <header>
-            <img src="../assets/img/gopher.png" alt="Logo Gopher">
-        </header>
-        <section id="links">
-            <ul>
-                <li>
-                    <a href="#">Profile</a>
-                </li>
-                <li>
-                    <a href="#">Timeline</a>
-                </li>
-                <li>
-                    <a href="#">To Do List</a>
-                </li>
-            </ul>
-        </section>
-        <button id="logout">
-            <span class="material-icons" style="transform:rotate(180deg)">
-                logout  
-            </span>
-            Logout
-        </button>
-    </nav>
-`
+const openSidebar=document.getElementById('open')
+const closeSidebar=document.getElementById('close')
+const sidebar=document.getElementById('sidebar');
 
-const OpenSidebarButton = `
-    <aside>
-        <button id="open">
-            <span class="material-icons">
-                menu
-            </span>
-        </button>
-    </aside>
-`
+const sidebarProp = {
+    width: "250px",
+}
+
+openSidebar.addEventListener('click', () => {
+    sidebar.style.width=sidebarProp.width;
+    sidebar.style.visibility="visible";
+})
+
+closeSidebar.addEventListener('click', () => {
+    setTimeout(() => {
+        sidebar.style.width="0";
+    }, 250);
+    sidebar.style.visibility="hidden";
+})

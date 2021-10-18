@@ -1,4 +1,5 @@
-@import "../Defaults/Colors.scss";
+@import "./Defaults/Fonts.scss";
+@import "./Defaults/Colors.scss";
 
 * {
     font-family: "Roboto", sans-serif;
@@ -15,8 +16,13 @@ aside {
         border: none;
         background-color: transparent;
 
+        &:hover {
+            cursor: pointer;
+        }
+
         span {
-            margin-left: 20px;
+            margin: 10px 20px;
+            transform: scale(1.5);
             color: $white;
         }
     }
@@ -25,14 +31,16 @@ aside {
 nav {
     $fontSize: 28px;
 
+    visibility: hidden;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     background-color: $yellow;
-    width: 250px;
+    width: 0;
     font-size: $fontSize;
     font-weight: 700;
+    transition: 0.5s;
 
     header {
         display: flex;
@@ -69,6 +77,7 @@ nav {
             right: 0;
             background-color: transparent;
             border: none;
+            color: $white;
             
             span {
                 font-size: 36px;
