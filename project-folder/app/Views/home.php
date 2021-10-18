@@ -42,20 +42,12 @@
             <article id="anggota" class="anggota">
                 <h4>Anggota</h4>
                 <section id="list">
-                    <!-- Ini masih default display -->
-                    <!-- Akan terisi oleh backend -->
-                    <script>
-                        const html = `
-                            <figure>
-                                <figcaption>Nama</figcaption>
-                                <figcaption>140810200xxx</figcaption>
-                            </figure>
-                        `;
-
-                        for(let i=0; i<12; i++) {
-                            document.writeln(html);
-                        }
-                    </script>
+                    <?php foreach($users as $user) : ?>
+                        <figure>
+                            <figcaption><?= $user["nama"]; ?></figcaption>
+                            <figcaption><?= $user["npm"] ?></figcaption>
+                        </figure>
+                    <?php endforeach; ?>
                 </section>
             </article>
         </main>
