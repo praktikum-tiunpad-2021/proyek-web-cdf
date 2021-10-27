@@ -18,12 +18,12 @@
             <article id="gopher">
                 <img src="assets/img/gopher.png" alt="Logo Gopher">
                 <section id="intro">
-                    <h2>Gopher 2020</h2>
+                    <h1>Gopher 2020</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </section>
             </article>
             <article id="koordinator" class="anggota">
-                <h4>Koordinator & Wakil Koordinator</h4>
+                <h2>Koordinator & Wakil Koordinator</h2>
                 <section id="foto">
                     <!-- Ini masih default display -->
                     <!-- Akan terisi oleh backend -->
@@ -40,7 +40,7 @@
                 </section>
             </article>
             <article id="anggota" class="anggota">
-                <h4>Anggota</h4>
+                <h2>Anggota</h2>
                 <section id="list">
                     <?php foreach($users as $user) : ?>
                         <figure>

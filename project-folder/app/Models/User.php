@@ -5,6 +5,11 @@ use CodeIgniter\Model;
 class User extends Model {
     protected $table="user";
     protected $primaryKey="npm";
+    protected $allowedFields=['nama', 'kelas', 'tgl_lahir', 'alamat', 'kontak', 'foto'];
+
+    // protected $validationMessages=[
+    //     'kelas' => 'Yang anda masukkan bukan kelas yang ada di teknik informatika',
+    // ];
 }
 
 ?>
