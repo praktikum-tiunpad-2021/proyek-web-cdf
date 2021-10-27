@@ -90,4 +90,9 @@ nav button#logout {
   gap: 10px;
 }
 
+main {
+  margin-left: 100px;
+  transition: 0.5s;
+}
+
 /*# sourceMappingURL=navbar.css.map */

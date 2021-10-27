@@ -28,6 +28,8 @@ aside {
     }
 }
 
+$slideTransisition: 0.5s; // The sliding animation time
+
 nav {
     $fontSize: 28px;
 
@@ -40,7 +42,7 @@ nav {
     width: 0;
     font-size: $fontSize;
     font-weight: 700;
-    transition: 0.5s;
+    transition: $slideTransisition;
 
     header {
         display: flex;
@@ -100,4 +102,9 @@ nav {
             gap: 10px;
         }
     }
+}
+
+main {
+    margin-left: 100px;
+    transition: $slideTransisition;
 }

@@ -15,27 +15,27 @@
         </span>
     </button>
     <header>
-        <img src="<?= base_url('assets/img/gopher.png') ?>" alt="Logo Gopher">
+        <a href="/Users/home">
+            <img src="<?= base_url('assets/img/gopher.png') ?>" alt="Logo Gopher">
+        </a>
     </header>
     <section id="links">
         <ul>
             <li>
-                <a href="#">Profile</a>
+                <a href="/Users/profile">Profile</a>
             </li>
             <li>
-                <a href="#">Timeline</a>
+                <a href="/Users/calendar">Timeline</a>
             </li>
             <li>
-                <a href="#">To Do List</a>
+                <a href="/Users/list">To Do List</a>
             </li>
         </ul>
     </section>
-    <button id="logout">
+    <button id="logout" onclick="location.href='/logout'">
         <span class="material-icons" style="transform:rotate(180deg)">
             logout  
         </span>
         Logout
     </button>
 </nav>
-
-<script src="<?= base_url('assets/scripts/Sidebar.js') ?>"></script>
