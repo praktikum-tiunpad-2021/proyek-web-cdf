@@ -34,7 +34,15 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/login', 'Home::login');
 $routes->post('/validateLogin', 'Home::validateLogin');
-$routes->post('/Users/home', 'Users::home');
+$routes->get('/logout', 'Home::logout');
+$routes->get('/Users/home', 'Users::home');
+$routes->get('/Users/announcement', 'Users::announcement');
+$routes->get('/Users/profile', 'Users::profile');
+$routes->get('/Users/profile/edit', 'Users::editProfile');
+$routes->post('/Users/profile/saveProfile', 'Users::saveProfile');
+$routes->post('/Users/profile/savePassword', 'Users::savePW');
+$routes->get('/Users/calendar', 'Users::calendar');
+$routes->get('/Users/list', 'Users::list');
 
 /*
  * --------------------------------------------------------------------

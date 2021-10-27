@@ -9,9 +9,12 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
-        <?= $this->include('Navbar'); ?>
-        <main>
-            <?= $this->renderSection("content"); ?>
+        <header>
+            <?= $this->include('Navbar'); ?>
+        </header>
+        <main id="main">
+            <?= $this->renderSection('content'); ?>
         </main>
+        <script src="<?= base_url('assets/scripts/Sidebar.js') ?>"></script>
     </body>
 </html>

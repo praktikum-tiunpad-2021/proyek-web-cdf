@@ -54,6 +54,11 @@ main form #visibility:hover {
   user-select: none;
   transition: 0.1s;
 }
+main form #invalid {
+  font-size: 10pt;
+  margin: 0;
+  color: rgba(226, 0, 0, 0.877);
+}
 main form button {
   background-color: #363636;
   color: #fff;

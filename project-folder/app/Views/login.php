@@ -2,7 +2,7 @@
 
 $invalid=false;
 if(isset($_GET["invalid"])) {
-    $wrongPassword=settype($_GET["invalid"], "boolean");
+    $invalid=settype($_GET["invalid"], "boolean");
 }
 
 ?>
@@ -37,6 +37,10 @@ if(isset($_GET["invalid"])) {
                     <input id="password" type="password" name="password">
                     <span id="visibility" class="material-icons">visibility</span>
                 </section>
+
+                <?php if($invalid) : ?>
+                    <p id="invalid">NPM atau password ada yang salah</p>
+                <?php endif; ?>
 
                 <button id="login" type="submit">Login</button>
             </form>

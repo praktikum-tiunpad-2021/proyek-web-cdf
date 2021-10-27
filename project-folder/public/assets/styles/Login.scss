@@ -60,6 +60,12 @@ main {
             }
         }
 
+        #invalid {
+            font-size: 10pt;
+            margin: 0; 
+            color: rgba(226, 0, 0, 0.877);
+        }
+
         button {
             background-color: $grey;
             color: $white;
