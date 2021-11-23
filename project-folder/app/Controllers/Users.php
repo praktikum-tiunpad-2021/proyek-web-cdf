@@ -5,12 +5,12 @@ use App\Models\Account;
 
 class Users extends BaseController {
     protected $session=null;
-    protected $userModel=null;
-    protected $accountModel=null;
+    protected $user=null;
+    protected $account=null;
 
     public function __construct() {
-        $this->userModel=new User();
-        $this->accountModel=new Account();
+        $this->user=new User();
+        $this->account=new Account();
         $this->session=\Config\Services::session(); // Session start
     }
 
@@ -54,8 +54,8 @@ class Users extends BaseController {
          *  npm={npm}
          * }
          */
-        if($this->userModel->save($newData)) {
-            $data=$this->userModel->find($this->session->get('npm'));
+        if($this->user->save($newData)) {
+            $data=$this->user->find($this->session->get('npm'));
             $this->session->set($data);
             return redirect()->to(base_url('/Users/profile'));
         } else {
@@ -65,7 +65,33 @@ class Users extends BaseController {
     }
 
     public function savePW() {
+        function isTheSameValue($old, $new) {
+            return $old === $new;
+        }
 
+        $newPassword = [
+            'input' => $this->request->getVar('new-pw'),
+            'confirm' => $this->request->getVar('confirm-pw')
+        ];
+
+        $oldPassword = [
+            'input' => $this->request->getVar('old-pw'),
+            'data' => $this->account->find($this->session->npm)["password"]
+        ];
+
+        // DEBUGGING
+        // var_dump($newPassword, $oldPassword);
+        // dd($account);
+
+        if(isTheSameValue($oldPassword['input'], $oldPassword['data'])) {
+            if(isTheSameValue($newPassword["input"], $newPassword["confirm"])) {
+                return redirect()->to(base_url('/Users/profile'));
+            } else {
+                return redirect()->to(base_url('/Users/profile/edit?invalid=true'));
+            }
+        } else {
+            return redirect()->to(base_url('/Users/profile/edit?invalid=true'));
+        }
     }
 
     public function calendar() {

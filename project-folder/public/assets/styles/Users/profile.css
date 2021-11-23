@@ -1,0 +1,28 @@
+.profile header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile header h1 {
+  background-color: #363636;
+  color: #fff;
+  padding: 5px 30px;
+}
+.profile header button {
+  background-color: #fcc100;
+  border: 1px solid #fcc100;
+  border-radius: 10px;
+  padding: 5px 25px;
+  transition: 0.1s;
+}
+.profile header button:hover {
+  cursor: pointer;
+  background-color: #CA9A00;
+  transition: 0.1s;
+}
+.profile main {
+  width: 400px;
+  margin: auto;
+}
+
+/*# sourceMappingURL=profile.css.map */

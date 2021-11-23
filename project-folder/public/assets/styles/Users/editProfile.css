@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.edit-profile #nav button {
+  border: 1px solid #fcc100;
+  background-color: #fcc100;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+.edit-profile #nav button:disabled {
+  background-color: transparent;
+}
+.edit-profile #nav button:disabled:hover {
+  cursor: not-allowed;
+}
+.edit-profile #nav button:hover {
+  cursor: pointer;
+}
+.edit-profile .edit-form {
+  position: fixed;
+  width: 700px;
+  margin: auto;
+}
+.edit-profile .edit-form section {
+  display: flex;
+  flex-direction: column;
+}
+.edit-profile .edit-form p {
+  margin: 10px 0;
+}
+.edit-profile .edit-form input, .edit-profile .edit-form textarea {
+  border: 2px solid #fcc100;
+  border-radius: 10px;
+  resize: none;
+  height: 10px;
+  padding: 10px;
+}
+.edit-profile .edit-form textarea {
+  height: unset;
+}
+.edit-profile .edit-form button {
+  width: unset;
+  color: #fff;
+  background-color: #363636;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin: 10px 0;
+}
+.edit-profile .edit-form button:hover {
+  cursor: pointer;
+}
+.edit-profile #save-profile {
+  visibility: visible;
+}
+.edit-profile #save-password {
+  visibility: hidden;
+}
+
+/*# sourceMappingURL=editProfile.css.map */
