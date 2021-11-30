@@ -91,7 +91,7 @@ nav button#logout {
 }
 
 main {
-  margin-left: 100px;
+  margin: 0 100px;
   transition: 0.5s;
 }
 

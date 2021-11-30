@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
-        <header>
+        <header id="main-header">
             <?= $this->include('Navbar'); ?>
         </header>
         <main id="main">
