@@ -101,6 +101,27 @@ class Users extends BaseController {
     public function list() {
         return view('User/list', ["session" => $this->session]);
     }
+
+    public function addList() {
+        $newData=[
+            "isi" => $this->request->getVar("isi"),
+            "keterangan" => $this->request->getVar("keterangan"),
+            "status" => 0,
+            "npm" => $this->session->get("npm"),
+        ];
+
+        $this->user->save($newData);
+
+        return redirect()->to(base_url('/Users/list'));
+    }
+
+    public function deleteList() {
+
+    }
+
+    public function updateList() {
+
+    }
 }
 
 ?>

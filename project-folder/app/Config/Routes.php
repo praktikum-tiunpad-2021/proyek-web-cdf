@@ -43,6 +43,9 @@ $routes->post('/Users/profile/saveProfile', 'Users::saveProfile');
 $routes->post('/Users/profile/savePassword', 'Users::savePW');
 $routes->get('/Users/calendar', 'Users::calendar');
 $routes->get('/Users/list', 'Users::list');
+$routes->post('/Users/list/add', 'Users::addList');
+$routes->post('/Users/list/delete', 'Users::deleteList');
+$routes->post('/Users/list/update', 'Users::updateList');
 
 /*
  * --------------------------------------------------------------------

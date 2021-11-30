@@ -8,6 +8,7 @@ class ToDoList extends Model {
         "isi", "keterangan",
         "status", "npm"
     ];
+    protected $useAutoIncrement=true;
 }
 
 ?>

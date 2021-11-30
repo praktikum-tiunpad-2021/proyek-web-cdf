@@ -36,6 +36,7 @@
                     <input 
                         type="text"
                         name="isi"
+                        required
                     >
                 </section>
                 <section id="keterangan" class="form-input">
@@ -44,6 +45,7 @@
                         name="keterangan" 
                         id="keterangan" 
                         rows="5"
+                        required
                     ></textarea>
                 </section>
                 <button type="submit" name="add" id="add">Add</button>
