@@ -25,6 +25,9 @@
                 <a href="/Users/profile">Profile</a>
             </li>
             <li>
+                <a href="/Users/announcement">Announcement</a>
+            </li>
+            <li>
                 <a href="/Users/calendar">Timeline</a>
             </li>
             <li>
