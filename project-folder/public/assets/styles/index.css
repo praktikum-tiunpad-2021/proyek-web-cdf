@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  padding: 0 100px;
+}
+
+nav {
+  padding: 20px 0;
+  display: flex;
+  justify-content: end;
+}
+nav button {
+  background-color: #fcc100;
+  color: #fff;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+nav button:hover {
+  background-color: #CA9A00;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+main {
+  padding: 0 40px;
+}
+main article {
+  margin-top: 40px;
+}
+main #gopher {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+main #gopher img {
+  width: 700px;
+  height: auto;
+}
+main .anggota {
+  background-color: #fcc100;
+  border-radius: 30px;
+  padding: 10px;
+}
+main #koordinator #foto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+main #anggota #list {
+  width: 880px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+h1 {
+  color: #fcc100;
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.foto-orang {
+  width: 210px;
+  height: 280px;
+}
+
+p, figcaption {
+  font-size: 18px;
+}
+
+figcaption {
+  width: 210px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=index.css.map */

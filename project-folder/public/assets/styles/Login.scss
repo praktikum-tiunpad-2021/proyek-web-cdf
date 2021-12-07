@@ -1,0 +1,84 @@
+@import "./Defaults/Fonts.scss";
+@import "./Defaults/Colors.scss";
+
+body {
+    padding: 0 100px;
+}
+
+#logo {
+    margin: 20px 0;
+}
+
+main {
+    width: 500px;
+    margin: auto;
+    background-color: $yellow;
+    padding: 30px 20px;
+    border-radius: 20px;
+
+    header {
+        text-align: center;
+    }
+    h1, h2, h3 {
+        margin: 0;
+    }
+
+    form {
+        $inputHeight: 30px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input {
+            border: none;
+            border-radius: 10px;
+            height: $inputHeight;
+            padding: 0 10px;
+            
+            &:focus {
+                outline: none;
+            }
+        }
+
+        #visibility {
+            position: absolute;
+            transform: translate(460px, ($inputHeight + (1/10 * $inputHeight)));
+            transition: 0.1s;
+
+            &:hover {
+                cursor: pointer;
+                color: rgb(43, 43, 43);
+                user-select: none;
+                transition: 0.1s;
+            }
+        }
+
+        #invalid {
+            font-size: 10pt;
+            margin: 0; 
+            color: rgba(226, 0, 0, 0.877);
+        }
+
+        button {
+            background-color: $grey;
+            color: $white;
+            border:none;
+            border-radius: 10px;
+            padding: 5px 0;
+            transition: 0.1s;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $greyLow;
+                transition: 0.1s;
+            }
+        }
+    }
+}

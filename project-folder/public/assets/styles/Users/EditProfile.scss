@@ -1,0 +1,73 @@
+@import "../Defaults/Fonts.scss";
+@import "../Defaults/Colors.scss";
+
+.edit-profile {
+    #nav {
+        button {
+            border: 1px solid $yellow;
+            background-color: $yellow;
+            border-radius: 5px;
+            padding: 3px 10px;
+
+            &:disabled {
+                background-color: transparent;
+                &:hover {
+                    cursor:not-allowed;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .edit-form {
+        position: fixed;
+        width: 700px;
+        margin: auto;
+
+        section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        input, textarea {
+            border: 2px solid $yellow;
+            border-radius: 10px;
+            resize: none;
+            height: 10px;
+            padding: 10px;  
+        }
+
+        textarea {
+            height: unset;
+        }
+
+        button {
+            width: unset;
+            color: $white;
+            background-color: $grey;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 20px;
+            margin: 10px 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    #save-profile {
+        visibility: visible;
+    }
+
+    #save-password {
+        visibility: hidden;
+    }
+}

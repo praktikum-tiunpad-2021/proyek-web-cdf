@@ -1,0 +1,156 @@
+@import "../Defaults/Colors.scss";
+@import "../Defaults/Fonts.scss";
+
+.list {
+    header {
+        $headerWidth: 200px;
+        background-color: $yellow;
+        width: $headerWidth;
+        margin: auto;
+        text-align: center;
+        padding: 10px;
+        margin-top:25px;
+
+        #clip {
+            position: absolute;
+            transform: translate((1/4)*$headerWidth, -25px);
+            width: (2/4)*$headerWidth;
+            
+            height: 25px;
+            background-color: $grey ;
+        }
+
+        h1 {
+            margin: 0;
+        }
+    }
+
+    main {
+        #to-do-list {
+            margin: 20px 120px;
+            background-color: $yellow;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+
+            .isi-list {
+                margin-bottom: 20px;
+
+                .isi {
+                    background-color: $white;
+                    padding: 5px 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .options {
+                        button {
+                            border: 1px solid $grey;
+                            border-radius: 5px;
+                            background-color: $grey;
+                            color: $white;
+                            padding: 5px 20px;
+        
+                            &:hover {
+                                cursor: pointer;
+                            }           
+                        }
+                    }
+                }
+            }
+
+            #add-list {
+                background-color: transparent;
+                border: none;
+                text-align: center;
+
+                span {
+                    font-size: 24pt;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        #add-item-form, #update-item-form {
+            position: fixed;
+            top: 30%;
+            left: 40%;
+
+            #backdrop {
+                position: fixed;
+                top:0;
+                bottom:0;
+                left:0;
+                right:0;
+                background-color: $grey;
+                opacity: 0.7;
+                z-index: -1;
+            }
+
+            form {
+                $gap: 10px;
+
+                h2 {
+                    text-align: center;
+                    margin: 0;
+                }
+
+                border-radius: 10px;
+                background-color: $yellow;
+                width: 300px;
+                padding: 10px;
+                z-index: 2;
+
+                .form-input {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: $gap;
+                }
+
+                $borderSize: 2px;
+
+                input {
+                    border: $borderSize solid $white;
+                    border-radius: 5px;
+                    padding: 5px;
+                    transition: 0.2s;
+
+                    &:focus {
+                        outline: none;
+                        border: $borderSize solid $grey;
+                        transition: 0.2s;
+                    }
+                }
+
+                textarea {
+                    resize: none;
+                    border: $borderSize solid $white;
+                    border-radius: 5px;
+                    padding: 5px;
+
+                    &:focus {
+                        outline: none;
+                        border: $borderSize solid $grey;
+                        transition: 0.2s;
+                    }
+                }
+
+                button {
+                    margin-top: $gap;
+                    border: 1px solid $grey;
+                    border-radius: 5px;
+                    background-color: $grey;
+                    color: $white;
+                    padding: 5px 20px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

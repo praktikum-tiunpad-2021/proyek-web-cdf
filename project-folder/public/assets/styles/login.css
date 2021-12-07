@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  padding: 0 100px;
+}
+
+#logo {
+  margin: 20px 0;
+}
+
+main {
+  width: 500px;
+  margin: auto;
+  background-color: #fcc100;
+  padding: 30px 20px;
+  border-radius: 20px;
+}
+main header {
+  text-align: center;
+}
+main h1, main h2, main h3 {
+  margin: 0;
+}
+main form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main form .inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main form input {
+  border: none;
+  border-radius: 10px;
+  height: 30px;
+  padding: 0 10px;
+}
+main form input:focus {
+  outline: none;
+}
+main form #visibility {
+  position: absolute;
+  transform: translate(460px, 33px);
+  transition: 0.1s;
+}
+main form #visibility:hover {
+  cursor: pointer;
+  color: #2b2b2b;
+  user-select: none;
+  transition: 0.1s;
+}
+main form #invalid {
+  font-size: 10pt;
+  margin: 0;
+  color: rgba(226, 0, 0, 0.877);
+}
+main form button {
+  background-color: #363636;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 0;
+  transition: 0.1s;
+}
+main form button:hover {
+  cursor: pointer;
+  background-color: #2E2E2B;
+  transition: 0.1s;
+}
+
+/*# sourceMappingURL=login.css.map */

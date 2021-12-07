@@ -1,0 +1,11 @@
+@import "../Defaults/Colors.scss";
+@import "../Defaults/Fonts.scss";
+
+.dashboard {
+    h2 {
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
