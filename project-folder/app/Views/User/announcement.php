@@ -9,41 +9,64 @@
         <h1>Announcement</h1>
     </header>
     <main>
-        <section class="announce-list">
-            <section class="isi">
-                <h2 class="tgl-kirim">dd/mm/yyyy</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, praesentium repellat quia veniam nihil adipisci reiciendis exercitationem tempora, veritatis fugiat incidunt? Deserunt ex quos rerum, facere ipsum voluptatum asperiores odit.</p>
-                <h2 class="pengirim">Nama</h2>
-            </section>
-            <section class="comments">
-                <h2>Komentar</h2>
-                <section class="form-komentar">
-                    <form action="/Users/announcement/comment/add">
-                        <input 
-                            type="text"
-                            id="isi"
-                            name="isi"
-                        >
-                        <button type="submit" name="send" class="submit">
-                            <span class="material-icons">
-                                send
-                            </span>
-                        </button>
-                    </form>
+        <section id="add-announcement">
+            <form action="/Users/announcement/add" method="post">
+                <section id="input-isi">
+                    <input 
+                        type="text"
+                        name="isi"
+                        id="isi"
+                        placeholder="Apa yang ingin di post?"
+                    >
                 </section>
-                <section class="list-komentar">
-                    <script>
-                        for(let i=0; i<5; i++) {
-                            document.writeln(`
-                            <section class="item-komentar">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas et, culpa reprehenderit atque totam aspernatur necessitatibus nesciunt a sapiente incidunt doloribus sit nemo rerum, accusamus labore veritatis, error perspiciatis eius.
-                            </section>
-                            `)
-                        }
-                    </script>
+                <section id="options">
+                    <button type="submit">Post</button>
                 </section>
-            </section>
+            </form>
         </section>
+        <?php foreach($announcement as $announce) : ?>
+            <section class="announce-list">
+                <section class="isi">
+                    <h2 class="tgl-kirim"><?= $announce["tgl_post"] ?></h2>
+                    <p>
+                        <?= $announce["isi"] ?>
+                    </p>
+                </section>
+                <section class="comments">
+                    <h2>Komentar</h2>
+                    <?php $id=$announce["id"] ?>
+                    <section class="form-komentar">
+                        <form action="/Users/announcement/comment/add" method="post">
+                            <input 
+                                type="text"
+                                id="isi"
+                                name="isi"
+                            >
+                            <input 
+                                type="hidden"
+                                name="id_announcement"
+                                value="<?= $id ?>"
+                            >
+                            <button type="submit" name="send" class="submit">
+                                <span class="material-icons">
+                                    send
+                                </span>
+                            </button>
+                        </form>
+                    </section>
+                    <section class="list-komentar">
+                        <?php foreach($comments as $comment) : ?>
+                            <?php if($comment["id_announcement"] == $id) : ?>
+                                <section class="item-komentar">
+                                    <?= $comment["isi"] ?>
+                                </section>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </section>
+                </section>
+            </section>
+
+        <?php endforeach; ?>
     </main>
 </section>
 

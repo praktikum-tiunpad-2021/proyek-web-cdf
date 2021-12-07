@@ -2,6 +2,9 @@
 
 use App\Models\User;
 use App\Models\Account;
+use App\Models\Announcement;
+use App\Models\Calendar;
+use App\Models\Comments;
 use App\Models\ToDoList;
 
 class Users extends BaseController {
@@ -9,20 +12,22 @@ class Users extends BaseController {
     protected $user=null;
     protected $account=null;
     protected $list=null;
+    protected $announcement=null;
+    protected $comment=null;
+    protected $calendar=null;
 
     public function __construct() {
         $this->user=new User();
         $this->account=new Account();
         $this->list=new ToDoList();
+        $this->announcement=new Announcement();
+        $this->comment=new Comments();
+        $this->calendar=new Calendar();
         $this->session=\Config\Services::session(); // Session start
     }
 
     public function home() {
         return view('User/dashboard', ["session" => $this->session]);
-    }
-
-    public function announcement() {
-        return view('User/announcement', ["session" => $this->session]);
     }
 
     public function profile() {
@@ -98,12 +103,38 @@ class Users extends BaseController {
     }
 
     public function calendar() {
-        return view('User/calendar', ["session" => $this->session]);
+        $calendar=$this->calendar->where('npm', $this->session->npm)
+                                 ->findAll();
+        $data=[
+            "session" => $this->session,
+            "calendar" => $calendar
+        ];
+        return view('User/calendar', $data);
+    }
+
+    public function addCalendar() {
+        $isi=$this->request->getVar("isi");
+        $tanggal=date("Y-m-d");
+        $npm=$this->session->npm;
+        $data=[
+            "isi" => $isi,
+            "tanggal" => $tanggal,
+            "npm" => $npm
+        ];
+        $this->calendar->insert($data);
+        return redirect()->to(base_url('/Users/calendar'));
+    }
+
+    public function deleteCalendar() {
+        $id=$this->request->getVar("id");
+        $this->calendar->delete($id);
+        return redirect()->to(base_url("/Users/calendar"));
     }
 
     public function list() {
         // $lists=$this->list->find($this->session->npm);
-        $lists=$this->list->where('npm', $this->session->npm)->findAll();
+        $lists=$this->list->where('npm', $this->session->npm)
+                          ->findAll();
         $data=[
             "session" => $this->session,
             "lists" => $lists
@@ -131,6 +162,40 @@ class Users extends BaseController {
 
     public function updateList() {
 
+    }
+
+    public function announcement() {
+        $lists=$this->announcement->findAll();
+        $komentar=$this->comment->findAll();
+        $data=[
+            "session" => $this->session,
+            "announcement" => $lists,
+            "comments" => $komentar
+        ];
+        return view('User/announcement', $data);
+    }
+
+    public function addAnnouncement() {
+        $isi=$this->request->getVar('isi');
+        $tglPost=date("Y-m-d");
+        $data=[
+            "isi" => $isi,
+            "tgl_post" => $tglPost,
+        ];
+        $this->announcement->insert($data);
+
+        return redirect()->to(base_url('/Users/announcement'));
+    }
+
+    public function addComment() {
+        $isi=$this->request->getVar("isi");
+        $idAnnouncement=$this->request->getVar("id_announcement");
+        $data=[
+            "isi" => $isi,
+            "id_announcement" => $idAnnouncement
+        ];
+        $this->comment->insert($data);
+        return redirect()->to(base_url("/Users/announcement"));
     }
 }
 

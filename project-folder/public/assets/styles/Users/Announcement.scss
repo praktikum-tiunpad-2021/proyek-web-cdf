@@ -15,6 +15,40 @@
         }
     }
 
+    #add-announcement {
+        form {
+            #input-isi {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 10px;
+                
+                input {
+                    height: 30px;
+                    border: 1px solid $grey;
+                    border-radius: 10px;
+                    padding: 5px 10px;
+
+                    &:focus {
+                        outline: none;
+                        border: 3px solid $grey;
+                    }
+                }
+            }
+
+            button {
+                border: 1px solid $grey;
+                border-radius: 5px;
+                background-color: $grey;
+                color: $white;
+                padding: 5px 10px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
     .announce-list {
         $commentWidth: 900px;
         $commentHeight: 50px;
@@ -22,10 +56,11 @@
         background-color: $grey;
         border-radius: 10px;
         padding: 10px 20px;
+        margin-top: 30px;
 
         .isi {
             background-color: $white;
-            padding: 0 20px;
+            padding: 5px 20px;
         }
 
         .comments {
@@ -46,9 +81,13 @@
 
                 button {
                     position: absolute;
-                    transform: translate(285    0%, 50%);
+                    transform: translate(2850%, 50%);
                     background-color: transparent;
                     border: none;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
 

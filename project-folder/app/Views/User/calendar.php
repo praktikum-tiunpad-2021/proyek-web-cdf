@@ -7,20 +7,23 @@
 <section class="calendar">
     <section id="lists">
         <h1>Calendar</h1>
-        <script>
-            for(let i=0; i<3; i++) {
-                document.writeln(`
+        <?php if(sizeof($calendar) <= 0) : ?>
+            <section>
+                Belum ada item dalam calendar ini
+            </section>
+        <?php else : ?>
+            <?php foreach($calendar as $cal) : ?>
                 <section class="items">
-                    <span>Nama</span>
-                    <span>dd/mm/yyyy</span>
+                    <span><?= $cal["isi"] ?></span>
+                    <span><?= $cal["tanggal"] ?></span>
                     <section class="options">
+                        <?php $id=$cal["id"]; ?>
                         <button onclick="location.href='/Users/calendar/update'">Edit</button>
-                        <button onclick="location.href='/Users/calendar/delete'">Delete</button>
+                        <button onclick="location.href='/Users/calendar/delete?id=<?= $id ?>'">Delete</button>
                     </section>
                 </section>
-                `)
-            }
-        </script>
+            <?php endforeach; ?>
+        <?php endif; ?>
         <section id="test">
             <button id="add">
                 <span class="material-icons">
@@ -30,7 +33,7 @@
         </section>
     </section>
     <section id="add-item" style="visibility: hidden;">
-        <form action="/Users/calendar/add">
+        <form action="/Users/calendar/add" method="post">
             <h2>Add New Timeline</h2>
             <section id="nama-event">
                 <label for="isi">Nama Event</label>

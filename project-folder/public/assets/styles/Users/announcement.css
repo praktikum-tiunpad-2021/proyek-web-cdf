@@ -14,14 +14,40 @@
 .announcement header h1 {
   margin: 0;
 }
+.announcement #add-announcement form #input-isi {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.announcement #add-announcement form #input-isi input {
+  height: 30px;
+  border: 1px solid #363636;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.announcement #add-announcement form #input-isi input:focus {
+  outline: none;
+  border: 3px solid #363636;
+}
+.announcement #add-announcement form button {
+  border: 1px solid #363636;
+  border-radius: 5px;
+  background-color: #363636;
+  color: #fff;
+  padding: 5px 10px;
+}
+.announcement #add-announcement form button:hover {
+  cursor: pointer;
+}
 .announcement .announce-list {
   background-color: #363636;
   border-radius: 10px;
   padding: 10px 20px;
+  margin-top: 30px;
 }
 .announcement .announce-list .isi {
   background-color: #fff;
-  padding: 0 20px;
+  padding: 5px 20px;
 }
 .announcement .announce-list .comments form {
   display: flex;
@@ -37,9 +63,12 @@
 }
 .announcement .announce-list .comments form button {
   position: absolute;
-  transform: translate(285 0%, 50%);
+  transform: translate(2850%, 50%);
   background-color: transparent;
   border: none;
+}
+.announcement .announce-list .comments form button:hover {
+  cursor: pointer;
 }
 .announcement .announce-list .comments .list-komentar {
   display: flex;
