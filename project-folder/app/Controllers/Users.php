@@ -2,15 +2,18 @@
 
 use App\Models\User;
 use App\Models\Account;
+use App\Models\ToDoList;
 
 class Users extends BaseController {
     protected $session=null;
     protected $user=null;
     protected $account=null;
+    protected $list=null;
 
     public function __construct() {
         $this->user=new User();
         $this->account=new Account();
+        $this->list=new ToDoList();
         $this->session=\Config\Services::session(); // Session start
     }
 
@@ -99,7 +102,13 @@ class Users extends BaseController {
     }
 
     public function list() {
-        return view('User/list', ["session" => $this->session]);
+        // $lists=$this->list->find($this->session->npm);
+        $lists=$this->list->where('npm', $this->session->npm)->findAll();
+        $data=[
+            "session" => $this->session,
+            "lists" => $lists
+        ];
+        return view('User/list', $data);
     }
 
     public function addList() {
@@ -110,13 +119,14 @@ class Users extends BaseController {
             "npm" => $this->session->get("npm"),
         ];
 
-        $this->user->save($newData);
-
+        $this->list->insert($newData);  
         return redirect()->to(base_url('/Users/list'));
     }
 
     public function deleteList() {
-
+        $idList=$this->request->getVar("id");
+        $this->list->delete($idList);
+        return redirect()->to(base_url('/Users/list'));
     }
 
     public function updateList() {

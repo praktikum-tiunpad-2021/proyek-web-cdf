@@ -34,11 +34,28 @@
             flex-direction: column;
 
             .isi-list {
-                margin-bottom: 30px;
+                margin-bottom: 20px;
 
                 .isi {
                     background-color: $white;
                     padding: 5px 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .options {
+                        button {
+                            border: 1px solid $grey;
+                            border-radius: 5px;
+                            background-color: $grey;
+                            color: $white;
+                            padding: 5px 20px;
+        
+                            &:hover {
+                                cursor: pointer;
+                            }           
+                        }
+                    }
                 }
             }
 
@@ -57,7 +74,7 @@
             }
         }
 
-        #add-item-form {
+        #add-item-form, #update-item-form {
             position: fixed;
             top: 30%;
             left: 40%;
@@ -81,6 +98,7 @@
                     margin: 0;
                 }
 
+                border-radius: 10px;
                 background-color: $yellow;
                 width: 300px;
                 padding: 10px;

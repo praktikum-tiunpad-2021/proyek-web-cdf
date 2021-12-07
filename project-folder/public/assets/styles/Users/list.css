@@ -29,11 +29,24 @@
   flex-direction: column;
 }
 .list main #to-do-list .isi-list {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .list main #to-do-list .isi-list .isi {
   background-color: #fff;
   padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list main #to-do-list .isi-list .isi .options button {
+  border: 1px solid #363636;
+  border-radius: 5px;
+  background-color: #363636;
+  color: #fff;
+  padding: 5px 20px;
+}
+.list main #to-do-list .isi-list .isi .options button:hover {
+  cursor: pointer;
 }
 .list main #to-do-list #add-list {
   background-color: transparent;
@@ -46,12 +59,12 @@
 .list main #to-do-list #add-list:hover {
   cursor: pointer;
 }
-.list main #add-item-form {
+.list main #add-item-form, .list main #update-item-form {
   position: fixed;
   top: 30%;
   left: 40%;
 }
-.list main #add-item-form #backdrop {
+.list main #add-item-form #backdrop, .list main #update-item-form #backdrop {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -61,44 +74,45 @@
   opacity: 0.7;
   z-index: -1;
 }
-.list main #add-item-form form {
+.list main #add-item-form form, .list main #update-item-form form {
+  border-radius: 10px;
   background-color: #fcc100;
   width: 300px;
   padding: 10px;
   z-index: 2;
 }
-.list main #add-item-form form h2 {
+.list main #add-item-form form h2, .list main #update-item-form form h2 {
   text-align: center;
   margin: 0;
 }
-.list main #add-item-form form .form-input {
+.list main #add-item-form form .form-input, .list main #update-item-form form .form-input {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
 }
-.list main #add-item-form form input {
+.list main #add-item-form form input, .list main #update-item-form form input {
   border: 2px solid #fff;
   border-radius: 5px;
   padding: 5px;
   transition: 0.2s;
 }
-.list main #add-item-form form input:focus {
+.list main #add-item-form form input:focus, .list main #update-item-form form input:focus {
   outline: none;
   border: 2px solid #363636;
   transition: 0.2s;
 }
-.list main #add-item-form form textarea {
+.list main #add-item-form form textarea, .list main #update-item-form form textarea {
   resize: none;
   border: 2px solid #fff;
   border-radius: 5px;
   padding: 5px;
 }
-.list main #add-item-form form textarea:focus {
+.list main #add-item-form form textarea:focus, .list main #update-item-form form textarea:focus {
   outline: none;
   border: 2px solid #363636;
   transition: 0.2s;
 }
-.list main #add-item-form form button {
+.list main #add-item-form form button, .list main #update-item-form form button {
   margin-top: 10px;
   border: 1px solid #363636;
   border-radius: 5px;
@@ -106,7 +120,7 @@
   color: #fff;
   padding: 5px 20px;
 }
-.list main #add-item-form form button:hover {
+.list main #add-item-form form button:hover, .list main #update-item-form form button:hover {
   cursor: pointer;
 }
 

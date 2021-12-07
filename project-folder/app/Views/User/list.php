@@ -11,16 +11,23 @@
     </header>
     <main>
         <section id="to-do-list">
-            <section class="isi-list">
-                <div id="point"></div>
-                <section class="isi">
-                    <p>Item 1</p>
-                </section>
-                <section class="options" style="visibility:hidden">
-                    <button>Edit</button>
-                    <button>Delete</button>
-                </section>
-            </section>
+            <?php if(sizeof($lists) <= 0) : ?>
+                <p>List kosong</p>
+            <?php else : ?>
+                <?php foreach($lists as $list) : ?>
+                    <section class="isi-list">
+                        <div id="point"></div>
+                        <section class="isi">
+                            <p><?= $list["isi"] ?></p>
+                            <section class="options">
+                                <?php $id=$list["id"]; ?>
+                                <button id="edit">Edit</button>
+                                <button onclick="location.href='/Users/list/delete?id=<?= $id ?>'">Delete</button>
+                            </section>
+                        </section>
+                    </section>
+                <?php endforeach; ?>
+            <?php endif; ?>
             <button id="add-list">
                 <span class="material-icons">
                     add
@@ -29,7 +36,7 @@
         </section>
 
         <section id="add-item-form" style="visibility:hidden;">
-            <form action="/User/list/add">
+            <form action="/Users/list/add" method="post">
                 <h2>Tambah Item</h2>
                 <section id="isi" class="form-input">
                     <label for="isi">Judul</label>
