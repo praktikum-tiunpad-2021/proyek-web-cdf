@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.announcement header {
+  background-color: #fcc100;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.announcement header h1 {
+  margin: 0;
+}
+.announcement .announce-list {
+  background-color: #363636;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.announcement .announce-list .isi {
+  background-color: #fff;
+  padding: 0 20px;
+}
+.announcement .announce-list .comments form {
+  display: flex;
+  flex-direction: column;
+}
+.announcement .announce-list .comments form input {
+  height: 50px;
+  border: 1px solid #363636;
+  border-radius: 10px;
+}
+.announcement .announce-list .comments form input:focus {
+  outline: none;
+}
+.announcement .announce-list .comments form button {
+  position: absolute;
+  transform: translate(285 0%, 50%);
+  background-color: transparent;
+  border: none;
+}
+.announcement .announce-list .comments .list-komentar {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 10px;
+}
+.announcement .announce-list .comments .list-komentar .item-komentar {
+  border: 1px solid #363636;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 5px;
+}
+.announcement .announce-list .comments .list-komentar .item-komentar p {
+  margin: 0;
+}
+.announcement .announce-list h2 {
+  width: 150px;
+  padding: 5px 10px;
+  background-color: #fcc100;
+  border-radius: 10px;
+}
+.announcement .announce-list h2 .pengirim {
+  position: absolute;
+}
+
+/*# sourceMappingURL=announcement.css.map */

@@ -1,0 +1,56 @@
+@import "../Defaults/Colors.scss";
+@import "../Defaults/Fonts.scss";
+
+.calendar {
+    #lists {
+        .items {
+            margin-top: 30px;
+            border: 1px solid $whiteLow;
+            padding: 10px;
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .options {
+            button {
+                background-color: $yellow;
+                border: 1px solid $yellow;
+                padding: 5px 20px;
+            }
+        }
+    }
+
+    #add-item {
+        $widthBox: 500px;
+
+        border: 10px solid $yellowLow;
+        background-color: $yellow;
+        padding: 30px;
+        width: $widthBox;
+        margin: auto;
+
+        form {
+            width: (1/2) * $widthBox;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            h2 {
+                margin: 0;
+            }
+
+            button {
+                border: 1px solid $grey;
+                border-radius: 10px;
+                padding: 5px 15px;
+                background-color: $grey;
+                color: $white;
+            }
+        }
+    }
+}

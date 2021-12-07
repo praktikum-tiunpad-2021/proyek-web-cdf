@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.calendar #lists .items {
+  margin-top: 30px;
+  border: 1px solid #c8c8c8;
+  padding: 10px;
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.calendar #lists .options button {
+  background-color: #fcc100;
+  border: 1px solid #fcc100;
+  padding: 5px 20px;
+}
+.calendar #add-item {
+  border: 10px solid #CA9A00;
+  background-color: #fcc100;
+  padding: 30px;
+  width: 500px;
+  margin: auto;
+}
+.calendar #add-item form {
+  width: 250px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.calendar #add-item form h2 {
+  margin: 0;
+}
+.calendar #add-item form button {
+  border: 1px solid #363636;
+  border-radius: 10px;
+  padding: 5px 15px;
+  background-color: #363636;
+  color: #fff;
+}
+
+/*# sourceMappingURL=calendar.css.map */

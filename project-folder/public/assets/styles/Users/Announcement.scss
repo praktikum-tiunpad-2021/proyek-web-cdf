@@ -1,0 +1,88 @@
+@import "../Defaults/Colors.scss";
+@import "../Defaults/Fonts.scss";
+
+.announcement {
+    header {
+        background-color: $yellow;
+        text-align: center;
+        width: 200px;
+        margin: auto;
+        margin-bottom: 10px;
+        padding: 10px;
+
+        h1 {
+            margin: 0;
+        }
+    }
+
+    .announce-list {
+        $commentWidth: 900px;
+        $commentHeight: 50px;
+
+        background-color: $grey;
+        border-radius: 10px;
+        padding: 10px 20px;
+
+        .isi {
+            background-color: $white;
+            padding: 0 20px;
+        }
+
+        .comments {
+            $commentGap: 10px;
+            form {
+                display: flex;
+                flex-direction: column;
+                input {
+                    // width: $commentWidth;
+                    height: $commentHeight;
+                    border: 1px solid $grey;
+                    border-radius: 10px;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                button {
+                    position: absolute;
+                    transform: translate(285    0%, 50%);
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+
+            .list-komentar {
+                display: flex;
+                flex-direction: column;
+                margin-top: $commentGap;
+                gap: $commentGap;
+
+                .item-komentar {
+                    // width: $commentWidth;
+                    // height: $commentHeight;
+                    border: 1px solid $grey;
+                    border-radius: 10px;
+                    background-color: $white;
+                    padding: 5px;
+
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        h2 {
+            width: 150px;
+            padding: 5px 10px;
+            background-color: $yellow;
+            border-radius: 10px;
+
+            .pengirim {
+                position: absolute;
+                
+            }
+        }
+    }
+}
