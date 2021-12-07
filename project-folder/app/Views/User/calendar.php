@@ -6,7 +6,7 @@
 
 <section class="calendar">
     <section id="lists">
-        
+        <h1>Calendar</h1>
         <script>
             for(let i=0; i<3; i++) {
                 document.writeln(`
@@ -21,8 +21,15 @@
                 `)
             }
         </script>
+        <section id="test">
+            <button id="add">
+                <span class="material-icons">
+                    add
+                </span>
+            </button>
+        </section>
     </section>
-    <section id="add-item">
+    <section id="add-item" style="visibility: hidden;">
         <form action="/Users/calendar/add">
             <h2>Add New Timeline</h2>
             <section id="nama-event">
@@ -45,7 +52,10 @@
                 <button id="save" name="save" type="submit">Save</button>
             </section>
         </form>
+        <div id="backdrop"></div>
     </section>
 </section>
+
+<script src="<?= base_url('assets/scripts/showAddCalendar.js') ?>"></script>
 
 <?= $this->endsection('content') ?>

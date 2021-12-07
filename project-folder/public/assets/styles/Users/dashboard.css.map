@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"dashboard.css"}
+{"version":3,"sourceRoot":"","sources":["../Defaults/Fonts.scss","Dashboard.scss"],"names":[],"mappings":"AAAQ;AAER;EACI;;;ACGI;EACI","file":"dashboard.css"}
